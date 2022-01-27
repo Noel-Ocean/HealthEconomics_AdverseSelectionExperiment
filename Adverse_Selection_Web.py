@@ -16,14 +16,14 @@ st.sidebar.write("**CMED6902 Health Economics**")
 st.sidebar.write("Adverse Selection: A Classroom Experiment")
 st.sidebar.write("**Reference**: Hodgson, A. (2014). Adverse Selection in Health Insurance Markets: A Classroom Experiment. The Journal of Economic Education, 45(2), 90-100.")
 
-
-page = st.selectbox("**Please choose a page**", ["About this Web App", "View/Download Dataset", "Run Experiment"])
+st.write("**Please choose a page**")
+page = st.selectbox("", ["About this Web App", "View/Download Dataset", "Run Experiment"])
 
 if page=='About this Web App':
     st.subheader("About this Web App")
     st.write("This web app is run as a seminar activity for Health Economics.")
     st.write("The activity mimics the consumer decision making, price rises and market collapse in heatlh insurance market, illustrating the concept of Adverse Selection.")
-    st.write("**Adverse Selection** occurs as a result of asymmetric information of on the characteristics of the insured between the insurer and insured in the health insurance market. Individuals may have better idea of their risk status than does the insurance company. Insurer set upprice premium based on the “average” probability of adverse event")
+    st.write("**Adverse Selection** occurs as a result of asymmetric information of on the characteristics of the insured between the insurer and insured in the health insurance market. Individuals may have better idea of their risk status than does the insurance company. Insurer set upprice premium based on the “average” probability of adverse event.")
 
 elif page=="View/Download Dataset":
     st.subheader("View/Downlad Dataset")
