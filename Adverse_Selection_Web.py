@@ -78,8 +78,8 @@ elif page=="Run Experiment":
     Silver_average = sum(Silver_cal)/30
     Gold_average = sum(Gold_cal)/30
 
-    st.write("**Please observe the average prices:** Bronze=${}, Silver=${}, Silver=${}".format(round(Bronze_average), round(Silver_average), round(Gold_average)))
+    st.write("**Please observe the average prices:** Bronze=${}, Silver=${}, Gold=${}".format(round(Bronze_average), round(Silver_average), round(Gold_average)))
 
-    plot = pd.DataFrame({"Plan A: Bronze": Bronze_average, "Plan B: Silver": Silver_average, "Plan C: Gold": Silver_average}, index=[0]).T
+    plot = pd.DataFrame({"Plan A: Bronze": Bronze_average, "Plan B: Silver": Silver_average, "Plan C: Gold": Gold_average}, index=[0]).T
     plot.columns=["Insurance Plan"]
     st.bar_chart(data=plot, width=700, height=400)
