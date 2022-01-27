@@ -1,8 +1,4 @@
-from operator import index
-from turtle import width
 import streamlit as st
-import plotly.figure_factory as ff
-import matplotlib.pyplot as plt
 import re
 import pandas as pd
 import numpy as np
