@@ -81,7 +81,7 @@ elif page=="Run Experiment":
     Silver_average = sum(Silver_cal)/30
     Gold_average = sum(Gold_cal)/30
 
-    st.write("**Please observe the change in average prices:** Bronze=${}, Silver=${}, Silver=${}".format(round(Bronze_average), round(Silver_average), round(Gold_average)))
+    st.write("**Please observe the average prices:** Bronze=${}, Silver=${}, Silver=${}".format(round(Bronze_average), round(Silver_average), round(Gold_average)))
 
     plot = pd.DataFrame({"Plan A: Bronze": Bronze_average, "Plan B: Silver": Silver_average, "Plan C: Gold": Silver_average}, index=[0]).T
     plot.columns=["Insurance Plan"]
