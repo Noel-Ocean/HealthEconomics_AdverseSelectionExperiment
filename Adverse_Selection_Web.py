@@ -3,7 +3,6 @@ import re
 import pandas as pd
 import numpy as np
 
-
 csv_gh = "https://raw.githubusercontent.com/Noel-Ocean/Testing/main/CMED6902%20-%20Adverse%20Selection%20Experiment%20Dataset.csv"
 df = pd.read_csv(csv_gh)
 df.columns=["Character Descriptions", "Pr(minor), Cost=$8K", "Pr(major), Cost=$200K",
@@ -40,8 +39,6 @@ elif page=="View/Download Dataset":
      mime='text/csv')
 
     st.table(df)
-    # table = ff.create_table(df)
-    # iplot.iplot(table, filename='pandas_table')
 
 elif page=="Run Experiment":
     st.subheader("Run Experiment")
