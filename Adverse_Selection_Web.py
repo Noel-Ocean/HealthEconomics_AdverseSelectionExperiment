@@ -17,7 +17,7 @@ st.sidebar.write("Adverse Selection: A Classroom Experiment")
 st.sidebar.write("**Reference**: Hodgson, A. (2014). Adverse Selection in Health Insurance Markets: A Classroom Experiment. The Journal of Economic Education, 45(2), 90-100.")
 
 st.write("**Please choose a page**")
-page = st.selectbox("", ["About this Web App", "View/Download Dataset", "Run Experiment"])
+page = st.selectbox("Proceed to", ["About this Web App", "View/Download Dataset", "Run Experiment"])
 
 if page=='About this Web App':
     st.subheader("About this Web App")
