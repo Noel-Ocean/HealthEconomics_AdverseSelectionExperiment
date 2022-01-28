@@ -14,7 +14,7 @@ df.columns=["Character Descriptions", "Pr(minor), Cost=$8K", "Pr(major), Cost=$2
 st.sidebar.write("**CMED6902 Health Economics**")
 st.sidebar.write("Adverse Selection: A Classroom Experiment")
 st.sidebar.write("**Reference**: Hodgson, A. (2014). Adverse Selection in Health Insurance Markets: A Classroom Experiment. The Journal of Economic Education, 45(2), 90-100.")
-st.sidebar.write("**Developer source code (Python) on GitHub**: https://raw.githubusercontent.com/Noel-Ocean/HealthEconomics_AdverseSelectionExperiment/main/Adverse_Selection_Web.py")
+st.sidebar.write("**Developer note**: This web app is developed with Python and Streamlit")
 
 # web body
 page = st.selectbox("Please choose a page", ["About this Web App", "View/Download Dataset", "Run Experiment"])
@@ -34,8 +34,7 @@ elif page=="View/Download Dataset":
         
     csv = convert_df(df)
     st.download_button(
-     label="Download data as CSV",
-     data=csv,
+     label="Download data as CSV", data=csv,
      file_name='Adverse_Experiment.csv',
      mime='text/csv')
 
@@ -46,11 +45,11 @@ elif page=="Run Experiment":
 
     Bronze=[]
     for i,j in zip(range(1,31), df["Bronze($)"]):
-        Bronze.append(f"Character{i}, ${j}")
+        Bronze.append(f"C{i}, ${j}")
 
     Silver=[]
     for i,j in zip(range(1,31), df["Silver($)"]):
-        Silver.append(f"Character{i}, ${j}")
+        Silver.append(f"C{i}, ${j}")
     
     Gold=[]
     for i,j in zip(range(1,31), df["Gold($)"]):
