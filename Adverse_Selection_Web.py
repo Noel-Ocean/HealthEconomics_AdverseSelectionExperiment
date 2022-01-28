@@ -87,4 +87,4 @@ elif page=="Run Experiment":
     st.write("**Original AVERAGE prices:** Bronze=${}, Silver=${}, Gold=${}".format(Bronze_raw, Silver_raw, Gold_raw))
     st.write("**Current AVERAGE prices:** Bronze=${}, Silver=${}, Gold=${}".format(Bronze_average, Silver_average, Gold_average))
     plot = pd.DataFrame({"1) Original": RAW, "2) Current": AVERAGE}, index=["Plan A: Bronze", "Plan B: Silver", "Plan C: Gold"]).T
-    st.bar_chart(data=plot, width=300, height=500)
+    st.bar_chart(data=plot, width=150, height=600)
