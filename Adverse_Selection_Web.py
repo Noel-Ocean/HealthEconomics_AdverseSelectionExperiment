@@ -13,7 +13,7 @@ df = pd.read_csv(csv_gh)
 df.columns=["Character Descriptions", "Pr(minor), Cost=$8K", "Pr(major), Cost=$200K",
             "Expected Cost of Care($)", "Bronze($)", "Silver($)", "Gold($)"]
 
-# wen sidebar
+# web sidebar
 st.sidebar.write("**CMED6902 Health Economics**")
 st.sidebar.write("Adverse Selection: A Classroom Experiment")
 st.sidebar.write("**Reference**: Hodgson, A. (2014). Adverse Selection in Health Insurance Markets: A Classroom Experiment. The Journal of Economic Education, 45(2), 90-100.")
