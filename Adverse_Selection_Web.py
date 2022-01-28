@@ -76,7 +76,7 @@ elif page=="Run Experiment":
         Silver_cal.append(int(find[0]))
    
     Gold_cal = []
-    for i in Gold:
+    for i in Gold_plan:
         find = re.findall('(\w+)\s*$', i)
         Gold_cal.append(int(find[0]))
 
