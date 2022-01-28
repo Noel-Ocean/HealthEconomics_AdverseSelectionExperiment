@@ -73,12 +73,12 @@ elif page=="Run Experiment":
         find = re.findall('(\w+)\s*$', i)
         Gold_cal.append(int(find[0]))
 
-    Bronze_average = sum(Bronze_cal)/30
-    Silver_average = sum(Silver_cal)/30
-    Gold_average = sum(Gold_cal)/30
+    Bronze_average = round(sum(Bronze_cal)/30)
+    Silver_average = round(sum(Silver_cal)/30)
+    Gold_average = round(sum(Gold_cal)/30)
 
-    st.write("**Please observe the average prices:** Bronze=${}, Silver=${}, Gold=${}".format(round(Bronze_average), round(Silver_average), round(Gold_average)))
+    st.write("**Please observe the average prices:** Bronze=${}, Silver=${}, Gold=${}".format(Bronze_average, Silver_average, Gold_average))
 
     plot = pd.DataFrame({"Plan A: Bronze": Bronze_average, "Plan B: Silver": Silver_average, "Plan C: Gold": Gold_average}, index=[0]).T
     plot.columns=["Insurance Plan"]
-    st.bar_chart(data=plot, width=700, height=400)
+    st.bar_chart(data=plot, width=700, height=500)
