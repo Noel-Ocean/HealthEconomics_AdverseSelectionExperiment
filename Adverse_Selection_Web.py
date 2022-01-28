@@ -3,19 +3,19 @@ import re
 import pandas as pd
 import numpy as np
 
-# general layout & data
+# general web layout & data
 st.set_page_config(layout="wide")
 csv_gh = "https://raw.githubusercontent.com/Noel-Ocean/Testing/main/CMED6902%20-%20Adverse%20Selection%20Experiment%20Dataset.csv"
 df = pd.read_csv(csv_gh)
 df.columns=["Character Descriptions", "Pr(minor), Cost=$8K", "Pr(major), Cost=$200K",
             "Expected Cost of Care($)", "Bronze($)", "Silver($)", "Gold($)"]
 
-# sidebar
+# wen sidebar
 st.sidebar.write("**CMED6902 Health Economics**")
 st.sidebar.write("Adverse Selection: A Classroom Experiment")
 st.sidebar.write("**Reference**: Hodgson, A. (2014). Adverse Selection in Health Insurance Markets: A Classroom Experiment. The Journal of Economic Education, 45(2), 90-100.")
-st.sidebar.writer("Web app developer source code on GitHub: https://raw.githubusercontent.com/Noel-Ocean/HealthEconomics_AdverseSelectionExperiment/main/Adverse_Selection_Web.py")
 
+# web body
 page = st.selectbox("Please choose a page", ["About this Web App", "View/Download Dataset", "Run Experiment"])
 
 if page=='About this Web App':
