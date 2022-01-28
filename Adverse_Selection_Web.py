@@ -86,5 +86,5 @@ elif page=="Run Experiment":
 
     st.write("**Please observe the AVERAGE prices:** Bronze=${}, Silver=${}, Gold=${}".format(Bronze_average, Silver_average, Gold_average))
     plot = pd.DataFrame({"Plan A: Bronze": Bronze_average, "Plan B: Silver": Silver_average, "Plan C: Gold": Gold_average}, index=[0]).T
-    plot.columns=["Insurance Plan"]
+    plot.columns=["Insurance Plan (Average$)"]
     st.bar_chart(data=plot, width=700, height=500)
