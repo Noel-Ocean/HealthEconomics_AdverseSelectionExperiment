@@ -14,7 +14,7 @@ df.columns=["Character Descriptions", "Pr(minor), Cost=$8K", "Pr(major), Cost=$2
 st.sidebar.write("**CMED6902 Health Economics**")
 st.sidebar.write("Adverse Selection: A Classroom Experiment")
 st.sidebar.write("**Reference**: Hodgson, A. (2014). Adverse Selection in Health Insurance Markets: A Classroom Experiment. The Journal of Economic Education, 45(2), 90-100.")
-st.sidebar.writer("**Developer note**: This web app is developed with Python and Streamlit")
+st.sidebar.writer("**Developer note**:")
 
 # web body
 page = st.selectbox("Please choose a page", ["About this Web App", "View/Download Dataset", "Run Experiment"])
