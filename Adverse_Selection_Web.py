@@ -1,4 +1,4 @@
-@ Developer: Noel Liang 
+#Developer:Noel Liang 
 #Web App: https://share.streamlit.io/noel-ocean/healtheconomics_adverseselectionexperiment/main/Adverse_Selection_Web.py
 
 import streamlit as st
