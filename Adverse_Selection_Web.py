@@ -80,11 +80,12 @@ elif page=="Run Experiment":
         find = re.findall('(\w+)\s*$', i)
         Gold_cal.append(int(find[0]))
 
-    Bronze_average = round(sum(Bronze_cal)/30)
-    Silver_average = round(sum(Silver_cal)/30)
-    Gold_average = round(sum(Gold_cal)/30)
+    Bronze_average, Silver_average, Gold_average = round(sum(Bronze_cal)/30, round(sum(Silver_cal)/30), round(sum(Gold_cal)/30)
+    Bronze_raw, Silver_raw, Gold_raw = sum(df["Bronze"])/30, sum(df["Silver"])/30, sum(df["Gold"])/30   
+    AVERAGE, RAW = [Bronze_average, Silver_average, Gold_average], Bronze_raw, Silver_raw, Gold_raw
 
     st.write("**Please observe the AVERAGE prices:** Bronze=${}, Silver=${}, Gold=${}".format(Bronze_average, Silver_average, Gold_average))
-    plot = pd.DataFrame({"Plan A: Bronze": Bronze_average, "Plan B: Silver": Silver_average, "Plan C: Gold": Gold_average}, index=[0]).T
-    plot.columns=["Insurance Plan (Average$)"]
-    st.bar_chart(data=plot, width=700, height=500)
+    plot = pd.DataFrame({"original": RAW, "current": [AVERAGE]}, index=["Plan A: Bronze", "Plan B: Silver", "Plan C: Gold"])
+#plot = pd.DataFrame({"Plan A: Bronze": Bronze_average, "Plan B: Silver": Silver_average, "Plan C: Gold": Gold_average}, index=[0]).T
+#plot.columns=["Insurance Plan (Average$)"]
+    st.bar_chart(data=plot, width=300, height=500)
