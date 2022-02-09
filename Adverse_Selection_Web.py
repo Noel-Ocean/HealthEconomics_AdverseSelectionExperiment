@@ -1,13 +1,17 @@
-#Developer:Noel Liang 
-#Web App: https://share.streamlit.io/noel-ocean/healtheconomics_adverseselectionexperiment/main/Adverse_Selection_Web.py
+#Developer: Noel Liang
+#Developer Note: The app requires Streamlit Cloud for App launch and full use
+#Developer version Github: https://github.com/Noel-Ocean/HealthEconomics_AdverseSelectionExperiment
+#Developer version Web App: https://share.streamlit.io/noel-ocean/healtheconomics_adverseselectionexperiment/main/Adverse_Selection_Web.py
 
 import streamlit as st
 import re
 import pandas as pd
 import numpy as np
 
-# general web layout & data
+# general web layout
 st.set_page_config(layout="wide")
+
+# dataset, remember to use the RAW link
 csv_gh = "https://raw.githubusercontent.com/Noel-Ocean/Testing/main/CMED6902%20-%20Adverse%20Selection%20Experiment%20Dataset.csv"
 df = pd.read_csv(csv_gh)
 df.columns=["Character Descriptions", "Pr(minor), Cost=$8K", "Pr(major), Cost=$200K",
