@@ -69,28 +69,28 @@ elif page=="Run Experiment":
     Gold_plan=st.multiselect('Silver (C1="Character1")', options=Gold_list, default=Gold_list)
    
 
-#     Bronze_cal = []
-#     for i in Bronze_plan:
-#         find = re.findall('(\w+)\s*$', i)
-#         Bronze_cal.append(int(find[0]))
+    Bronze_cal = []
+    for i in Bronze_plan:
+        find = re.findall('(\w+)\s*$', i)
+        Bronze_cal.append(int(find[0]))
 
-#     Silver_cal = []
-#     for i in Silver_plan:
-#         find = re.findall('(\w+)\s*$', i)
-#         Silver_cal.append(int(find[0]))
+    Silver_cal = []
+    for i in Silver_plan:
+        find = re.findall('(\w+)\s*$', i)
+        Silver_cal.append(int(find[0]))
    
-#     Gold_cal = []
-#     for i in Gold_plan:
-#         find = re.findall('(\w+)\s*$', i)
-#         Gold_cal.append(int(find[0]))
+    Gold_cal = []
+    for i in Gold_plan:
+        find = re.findall('(\w+)\s*$', i)
+        Gold_cal.append(int(find[0]))
 
-#     Bronze_average, Silver_average, Gold_average = round(sum(Bronze_cal)/30), round(sum(Silver_cal)/30), round(sum(Gold_cal)/30)
-#     Bronze_raw, Silver_raw, Gold_raw = round(sum(df["Bronze($)"])/30), round(sum(df["Silver($)"])/30), round(sum(df["Gold($)"])/30)
+    Bronze_average, Silver_average, Gold_average = round(sum(Bronze_cal)/30), round(sum(Silver_cal)/30), round(sum(Gold_cal)/30)
+    Bronze_raw, Silver_raw, Gold_raw = round(sum(df["Bronze($)"])/30), round(sum(df["Silver($)"])/30), round(sum(df["Gold($)"])/30)
     
-#     AVERAGE, RAW = [Bronze_average, Silver_average, Gold_average], [Bronze_raw, Silver_raw, Gold_raw]
+    AVERAGE, RAW = [Bronze_average, Silver_average, Gold_average], [Bronze_raw, Silver_raw, Gold_raw]
 
-#     st.write("**Original AVERAGE prices:** Bronze=${}$, Silver=${}$, Gold=${}$".format(Bronze_raw, Silver_raw, Gold_raw))
-#     st.write("**Current AVERAGE prices:** Bronze=${}$, Silver=${}$, Gold=${}$".format(Bronze_average, Silver_average, Gold_average))
+    st.write("**Original AVERAGE prices:** Bronze=${}$, Silver=${}$, Gold=${}$".format(Bronze_raw, Silver_raw, Gold_raw))
+    st.write("**Current AVERAGE prices:** Bronze=${}$, Silver=${}$, Gold=${}$".format(Bronze_average, Silver_average, Gold_average))
     
-#     plot = pd.DataFrame({"1) Original": RAW, "2) Current": AVERAGE}, index=["Plan A: Bronze", "Plan B: Silver", "Plan C: Gold"]).T
-#     st.bar_chart(data=plot, width=50, height=500)
+    plot = pd.DataFrame({"1) Original": RAW, "2) Current": AVERAGE}, index=["Plan A: Bronze", "Plan B: Silver", "Plan C: Gold"]).T
+    st.bar_chart(data=plot, width=50, height=500)
