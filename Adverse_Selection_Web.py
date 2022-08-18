@@ -64,8 +64,9 @@ elif page=="Run Experiment":
     for i,j in zip(range(1,31), df["Gold($)"]):
         Gold_list.append(f"C{i}, ${j}")
         
-    Bronze_plan =  st.multiselect('Bronze (C1="Character1")', options=Bronze_list, default=Bronze_list, key=int)
-    Silver_plan =  st.multiselect('Silver (C1="Character1")', options=Silver_list, default=Silver_list)
+    Bronze_plan=st.multiselect('Bronze (C1="Character1")', options=Bronze_list, default=Bronze_list, key=int)
+    Silver_plan=st.multiselect('Silver (C1="Character1")', options=Silver_list, default=Silver_list)
+    Gold_plan=st.multiselect('Silver (C1="Character1")', options=Gold_list, default=Gold_list)
    
 
 #     Bronze_cal = []
