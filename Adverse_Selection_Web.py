@@ -66,7 +66,7 @@ elif page=="Run Experiment":
         Gold.append(f"C{i}, ${j}")
 
     Bronze_plan =  st.multiselect('Bronze (C1="Character1")', options=Bronze, default=Bronze, key=int)
-    Silver_plan = st.multiselect('Silver (C1="Character1")', options=Silver, default=Silver, key=int) 
+    Bronze_plan =  st.multiselect('Bronzeee (C1="Character1")', options=Bronze, default=Bronze, key=int)
 #     Gold_plan = st.multiselect('Gold (C1="Character1")', options=Gold, default=Gold, key=int) 
 
 #     Bronze_cal = []
