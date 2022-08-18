@@ -53,19 +53,20 @@ elif page=="Run Experiment":
     with st.expander("See character descriptions"):
             st.write(df["Character Descriptions"])
 
-    Bronze=[]
-    for i,j in zip(range(1,31), df["Bronze($)"]):
-        Bronze.append(f"C{i}, ${j}")
-    Bronze_plan =  st.multiselect('Bronze (C1="Character1")', options=Bronze, default=Bronze, key=int)
-
-    Silver=[]
-    for i,j in zip(range(1,31), df["Silver($)"]):
-        Silver.append(f"C{i}, ${j}")
-    Silver_plan =  st.multiselect('Silver (C1="Character1")', options=Silver, default=Silver, key=int)
+    Bronze_list, Silver_list, Gold_list=[],[],[]
     
-    Gold=[]
+    for i,j in zip(range(1,31), df["Bronze($)"]):
+        Bronze_list.append(f"C{i}, ${j}")
+        
+    for i,j in zip(range(1,31), df["Silver($)"]):
+        Silver_list.append(f"C{i}, ${j}")
+        
     for i,j in zip(range(1,31), df["Gold($)"]):
-        Gold.append(f"C{i}, ${j}")
+        Gold_list.append(f"C{i}, ${j}")
+        
+    Bronze_plan =  st.multiselect('Bronze (C1="Character1")', options=Bronze_list, default=Bronze_list, key=int)
+    Silver_plan =  st.multiselect('Silver (C1="Character1")', options=Silver_list, default=Silver_list, key=int)
+   
 
 #     Bronze_cal = []
 #     for i in Bronze_plan:
