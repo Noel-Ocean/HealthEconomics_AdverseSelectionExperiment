@@ -1,4 +1,4 @@
-# Adverse Experiment: A Classroom Experiment
+# Adverse Selection: A Classroom Experiment
 
 ### About the web application:
 This web app is run as a seminar activity for Health Economics. The activity mimics the consumer decision making, price rises and market collapse in heatlh insurance market, illustrating the concept of Adverse Selection.
